@@ -1,0 +1,14 @@
+# env
+.env
+
+# binary
+inference-api
+
+# go
+vendor/
+
+# models
+models/*.onnx
+
+# os
+.DS_Store/
