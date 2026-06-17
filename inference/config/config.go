@@ -17,7 +17,7 @@ func Load() *Config {
 	return &Config{
 		Port:        getEnv("PORT", "8080"),
 		DatabaseURL: buildDatabaseURL(),
-		RedisAddr:   getEnv("REDIS_ADDR", "loaclhost:6767"),
+		RedisAddr:   getEnv("REDIS_ADDR", "loaclhost:6379"),
 		ModelsDir:   getEnv("MODELS_DIR", "./models"),
 		GinMode:     getEnv("GIN_MODE", "debug"),
 	}
