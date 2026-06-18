@@ -3,9 +3,9 @@ package main
 import (
 	"log"
 
-	"github.com/StillN0THIM/SORTER-UP/internal/config"
-	"github.com/StillN0THIM/SORTER-UP/internal/db"
-	"github.com/StillN0THIM/SORTER-UP/internal/routes"
+	"github.com/StillN0THIM/sorter-up/internal/config"
+	"github.com/StillN0THIM/sorter-up/internal/db"
+	"github.com/StillN0THIM/sorter-up/internal/routes"
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 )

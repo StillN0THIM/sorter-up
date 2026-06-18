@@ -1,8 +1,8 @@
 package routes
 
 import (
-	"github.com/StillN0THIM/SORTER-UP/internal/handlers"
-	"github.com/StillN0THIM/SORTER-UP/internal/middleware"
+	"github.com/StillN0THIM/sorter-up/internal/handlers"
+	"github.com/StillN0THIM/sorter-up/internal/middleware"
 	"github.com/gin-gonic/gin"
 	"github.com/jackc/pgx/v5/pgxpool"
 	"github.com/redis/go-redis/v9"
