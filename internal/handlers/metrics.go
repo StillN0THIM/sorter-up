@@ -33,6 +33,6 @@ func init() {
 func Metrices() gin.HandlerFunc {
 	h := promhttp.Handler()
 	return func(c *gin.Context) {
-		h.ServeHTTP{c.Writer, c.Request}
+		h.ServeHTTP(c.Writer, c.Request)
 	}
 }
