@@ -1,4 +1,4 @@
-module github.com/himanshu/inference-platform
+module github.com/StillN0THIM/SORTER-UP
 
 go 1.22
 

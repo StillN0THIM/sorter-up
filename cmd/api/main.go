@@ -2,11 +2,10 @@ package main
 
 import (
 	"log"
-	"os"
 
-	"github.com/StillN0THIM/inference-platform/internal/config"
-	"github.com/StillN0THIM/inference-platform/internal/db"
-	"github.com/StillN0THIM/inference-platform/internal/routes"
+	"github.com/StillN0THIM/SORTER-UP/internal/config"
+	"github.com/StillN0THIM/SORTER-UP/internal/db"
+	"github.com/StillN0THIM/SORTER-UP/internal/routes"
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 )

@@ -1,12 +1,11 @@
 package routes
 
 import (
-	"github.com/StillN0THIM/inference-platform/internal/handlers"
-	"github.com/StillN0THIM/inference-platform/internal/middleware"
+	"github.com/StillN0THIM/SORTER-UP/internal/handlers"
+	"github.com/StillN0THIM/SORTER-UP/internal/middleware"
 	"github.com/gin-gonic/gin"
 	"github.com/jackc/pgx/v5/pgxpool"
 	"github.com/redis/go-redis/v9"
-	"github.com/svix/svix-webhooks/go/models"
 )
 
 func Register(r *gin.Engine, pool *pgxpool.Pool, rdb *redis.Client) {
