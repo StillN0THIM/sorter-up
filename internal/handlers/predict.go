@@ -13,7 +13,6 @@ import (
 )
 
 type PredictRequest struct {
-	S
 	ModelName string `form:"model_name" binding:"required"`
 	Version   string `form:"version"    binding:"required"`
 }
