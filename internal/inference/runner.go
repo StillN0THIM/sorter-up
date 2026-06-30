@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/StillN0THIM/inference-platform/internal/inference/loader"
+	"github.com/StillN0THIM/sorter-up/internal/inference/loader"
 	"github.com/gin-gonic/gin"
 	"github.com/redis/go-redis/v9"
 	ort "github.com/yalue/onnxruntime_go"

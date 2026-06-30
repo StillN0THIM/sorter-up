@@ -3,9 +3,9 @@ package loader
 import (
 	"context"
 	"fmt"
-	"go/version"
 	"os"
 	"path/filepath"
+	"sync"
 
 	"github.com/redis/go-redis/v9"
 	ort "github.com/yalue/onnxruntime_go"
@@ -50,4 +50,24 @@ func loadFromDisk(modelName, version string) (*ort.DynamicAdvancedSession, error
 		return nil, fmt.Errorf("create onnx session:%w", err)
 	}
 	return session, nil
+}
+
+type cache struct {
+	mu    sync.RWMutex
+	store map[string]*ort.DynamicAdvancedSession
+}
+
+var sessionCache = &cache{store: make(map[string]*ort.DynamicAdvancedSession)}
+
+func (c *cache) get(key string) (*ort.DynamicAdvancedSession, bool) {
+	c.mu.RLock()
+	defer c.mu.RUnlock()
+	s, ok := c.store[key]
+	return s, ok
+}
+
+func (c *cache) set(key string, s *ort.DynamicAdvancesSession) {
+	c.mu.Lock()
+	defer c.mu.Unlock()
+	c.store[key] = s
 }
